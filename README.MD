@@ -2,7 +2,7 @@
 
 ## Overview
 This project is a Spring Boot application that manages roles and privileges. It includes user registration, authentication, and role-based access control.
-
+[View detailed explanation here](./Notes.MD)
 ## Prerequisites
 - Java 17 or higher
 - Maven 3.6.0 or higher
