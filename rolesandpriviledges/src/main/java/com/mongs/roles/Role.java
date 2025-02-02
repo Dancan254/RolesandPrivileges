@@ -13,6 +13,7 @@ import java.util.Collection;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "roles")
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,9 +26,9 @@ public class Role {
     @JoinTable(
             name = "Role_privileges",
             joinColumns = @JoinColumn(
-                    name = "role_id", referencedColumnName = "privileges_id"),
+                    name = "role_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(
-                    name = "NULL", referencedColumnName = "NULL"))
+                    name = "privileges_id", referencedColumnName = "id"))
     private Collection<Privilege> privileges;
 
     public Role(String name) {
