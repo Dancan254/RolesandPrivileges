@@ -82,3 +82,8 @@ To register a new user, send a `POST` request to `/api/auth/register` with the f
 
 ### Accessing Protected Endpoints
 Ensure you have the appropriate role to access protected endpoints. For example, to access `/api/admin/**`, you need to have the `ADMIN` role.
+
+## Flowchart
+
+![Flowchart 1](./images/rolesmain.png)
+![Flowchart 2](./images/roles2.png)
