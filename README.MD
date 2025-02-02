@@ -85,5 +85,5 @@ Ensure you have the appropriate role to access protected endpoints. For example,
 
 ## Flowchart
 
-![Flowchart 1](./images/rolesmain.png)
+![Flowchart 1](./images/roles.png)
 ![Flowchart 2](./images/roles2.png)
