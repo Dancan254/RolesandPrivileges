@@ -1,4 +1,4 @@
-package com.mongs.roles;
+package com.mongs.roles.service;
 
 public interface IUserService {
 }

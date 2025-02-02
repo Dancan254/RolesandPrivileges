@@ -1,4 +1,4 @@
-package com.mongs.roles;
+package com.mongs.roles.models;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

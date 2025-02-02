@@ -1,5 +1,6 @@
-package com.mongs.roles;
+package com.mongs.roles.repository;
 
+import com.mongs.roles.models.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RoleRepository extends JpaRepository<Role, Long> {

@@ -1,4 +1,4 @@
-package com.mongs.roles;
+package com.mongs.roles.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

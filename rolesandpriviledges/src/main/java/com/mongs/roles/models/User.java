@@ -1,9 +1,8 @@
-package com.mongs.roles;
+package com.mongs.roles.models;
 
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Collection;
 import java.util.Set;
 
 

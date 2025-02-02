@@ -1,8 +1,8 @@
 package com.mongs.roles.controller;
 
-import com.mongs.roles.MyUserDetailsService;
-import com.mongs.roles.User;
-import com.mongs.roles.UserDto;
+import com.mongs.roles.service.MyUserDetailsService;
+import com.mongs.roles.models.User;
+import com.mongs.roles.models.UserDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

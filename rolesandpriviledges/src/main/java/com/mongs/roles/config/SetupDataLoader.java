@@ -1,5 +1,11 @@
-package com.mongs.roles;
+package com.mongs.roles.config;
 
+import com.mongs.roles.models.Privilege;
+import com.mongs.roles.models.Role;
+import com.mongs.roles.models.User;
+import com.mongs.roles.repository.PrivilegeRepository;
+import com.mongs.roles.repository.RoleRepository;
+import com.mongs.roles.repository.UserRepository;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -8,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 @Component
@@ -45,7 +52,7 @@ public class SetupDataLoader {
         user.setLastName("Test");
         user.setPassword(passwordEncoder.encode("test"));
         user.setEmail("test@test.com");
-        user.setRoles(Arrays.asList(adminRole));
+        user.setRoles(Collections.singleton(adminRole));
         user.setEnabled(true);
         userRepository.save(user);
         alreadySetup = true;

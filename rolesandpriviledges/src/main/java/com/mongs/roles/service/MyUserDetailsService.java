@@ -1,5 +1,11 @@
-package com.mongs.roles;
+package com.mongs.roles.service;
 
+import com.mongs.roles.repository.RoleRepository;
+import com.mongs.roles.repository.UserRepository;
+import com.mongs.roles.models.Privilege;
+import com.mongs.roles.models.Role;
+import com.mongs.roles.models.User;
+import com.mongs.roles.models.UserDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.security.core.GrantedAuthority;
@@ -82,7 +88,7 @@ public class MyUserDetailsService implements UserDetailsService {
         newUser.setEmail(user.getEmail());
         newUser.setPassword(passwordEncoder.encode(user.getPassword()));
         newUser.setEnabled(true);
-        newUser.setRoles(Collections.singletonList(roleRepository.findByName("ROLE_USER")));
+        newUser.setRoles(Collections.singleton(roleRepository.findByName("ROLE_USER")));
         return userRepository.save(newUser);
     }
 }
