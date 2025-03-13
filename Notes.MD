@@ -9,7 +9,6 @@ When a user registers, you typically assign them a default role (for example, `R
 
 This default role ensures the user has baseline access rights in the system.
 
----
 
 ### **2. Extending or Appending Roles Post-Registration**
 
@@ -43,7 +42,6 @@ private Set<Role> roles = new HashSet<>();
 
 Adding a role to a user is as simple as calling `user.getRoles().add(newRole)` and saving the user.
 
----
 
 ### **3. Underlying Architecture of Role-Based Security**
 
@@ -88,7 +86,6 @@ An administrative interface can be built to manage users and roles. This include
 - **Auditing Changes:**
 It is often a best practice to log any changes to user roles for security auditing. This way, you can trace who granted or revoked access at any point in time.
 
----
 
 ### **4. Summary**
 
@@ -101,5 +98,3 @@ It is often a best practice to log any changes to user roles for security auditi
 - **Dynamic Updates:** Once the user’s roles are updated in the database, future authentications or token refreshes will reflect the new roles.
 
 By designing your system this way, you ensure that your application is both flexible and secure—users can be granted additional permissions as needed without needing to re-register or interrupt their access, and your security model remains robust and auditable.
-
----
