@@ -19,7 +19,7 @@ public class AuthController {
     public ResponseEntity<?> register(@RequestBody UserDto user) {
         try{
             User registeredUser = userService.register(user);
-            return ResponseEntity.ok("User registered successfully");
+            return ResponseEntity.ok(registeredUser);
         }
         catch (Exception e){
             return ResponseEntity.badRequest().body("User registration failed");
